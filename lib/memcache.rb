@@ -159,7 +159,10 @@ class MemCache
       raise ArgumentError, "wrong number of arguments (#{args.length} for 2)"
     end
 
-    @evented = defined?(EM) && EM.reactor_running?
+    # FIXED: Experteer memcache-client should be EventMashine-agnostic
+    # @evented = defined?(EM) && EM.reactor_running?
+    @evented = false
+    
     opts = DEFAULT_OPTIONS.merge opts
     @namespace    = opts[:namespace]
     @readonly     = opts[:readonly]
@@ -1021,9 +1024,10 @@ class MemCache
       @timeout = memcache.timeout
       @logger = memcache.logger
 
-      if defined?(EM) and EM.reactor_running? and defined?(MemCache::EventedServer)
-        self.extend(MemCache::EventedServer)
-      end
+      # FIXED: Experteer memcache-client should be EventMashine-agnostic
+      # if defined?(EM) and EM.reactor_running? and defined?(MemCache::EventedServer)
+      #  self.extend(MemCache::EventedServer)
+      # end
     end
 
     ##
