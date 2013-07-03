@@ -362,6 +362,7 @@ class MemCache
   # see MemCache#add.
 
   ONE_MB = 1024 * 1024
+  TEN_MB = ONE_MB * 10
 
   def set(key, value, expiry = 0, raw = false)
     raise MemCacheError, "Update of readonly cache" if @readonly
@@ -370,8 +371,8 @@ class MemCache
     with_server(key) do |server, cache_key|
       logger.debug { "set #{key} to #{server.inspect}: #{value.to_s.bytesize}" } if logger
 
-      if @check_size && value.to_s.bytesize > ONE_MB
-        raise MemCacheError, "Value too large, memcached can only store 1MB of data per key"
+      if @check_size && value.to_s.bytesize > TEN_MB
+        raise MemCacheError, "Value too large, memcached can only store 10MB of data per key (experteer fix)"
       end
 
       with_socket_management(server) do |socket|
