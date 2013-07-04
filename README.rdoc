@@ -1,6 +1,11 @@
-= memcache-client
+= experteer-memcache-client
 
 A ruby library for accessing memcached.
+Patched to suit pjpp needs. 
+
+<b>Experteer has applied these patches:</b>
+* it cannot run with eventmachine on Ruby < 1.9 therefore EventMachine should be invisible to memcache-client
+* the data value capacity has been raised to 10MB 
 
 == memcache-client is deprecated as of August 2010.  It will be supported through 2010 but new code should use Dalli[http://github.com/mperham/dalli] instead.
 
