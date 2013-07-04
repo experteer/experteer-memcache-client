@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{memcache-client}
+  s.name = %q{experteer-memcache-client}
   s.version = "1.8.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Eric Hodel", "Robert Cottrell", "Mike Perham"]
-  s.date = %q{2010-07-05}
+  s.date = %q{2013-07-04}
   s.default_executable = %q{memcached_top}
-  s.description = %q{A Ruby library for accessing memcached.}
+  s.description = %q{Experteer-patched Ruby library for accessing memcached.}
   s.email = %q{mperham@gmail.com}
   s.executables = ["memcached_top"]
   s.extra_rdoc_files = [
@@ -34,11 +34,11 @@ Gem::Specification.new do |s|
      "test/test_event_machine.rb",
      "test/test_mem_cache.rb"
   ]
-  s.homepage = %q{http://github.com/mperham/memcache-client}
+  s.homepage = %q{http://github.com/experteer/experteer-memcache-client}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{A Ruby library for accessing memcached.}
+  s.summary = %q{Experteer-patched Ruby library for accessing memcached.}
   s.test_files = [
     "test/test_benchmark.rb",
      "test/test_event_machine.rb",
