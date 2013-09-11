@@ -4,8 +4,8 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{experteer-memcache-client}
-  s.version = "1.8.5"
+  s.name = %q{memcache-client}
+  s.version = "1.8.200"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Eric Hodel", "Robert Cottrell", "Mike Perham"]
@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
      "test/test_event_machine.rb",
      "test/test_mem_cache.rb"
   ]
-  s.homepage = %q{http://github.com/experteer/experteer-memcache-client}
+  s.homepage = %q{http://github.com/experteer/memcache-client}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
